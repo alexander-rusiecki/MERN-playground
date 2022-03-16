@@ -1,10 +1,11 @@
 import { useQuery } from 'react-query';
 import axios from 'axios';
 import { IDog } from '../models/DogInterface';
+import Dog from './Dog';
 
 function DogList() {
   const { isLoading, data } = useQuery('dogs', () => {
-    return axios.get('http://localhost:4000/api/dogs/');
+    return axios.get<IDog[]>('http://localhost:4000/api/dogs/');
   });
 
   if (isLoading) {
@@ -12,9 +13,8 @@ function DogList() {
   }
   return (
     <>
-      <h1>Dogs:</h1>
       {data?.data.map((dog: IDog) => (
-        <h1 key={dog._id}>{dog.breed}</h1>
+        <Dog dog={dog} />
       ))}
     </>
   );
