@@ -14,3 +14,4 @@ This is a fullstack playground CRUD app for testing all types of technologies
 - Node.js
 - Express
 - MongoDB + Mongoose
+- Material UI
