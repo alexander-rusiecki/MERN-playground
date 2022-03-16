@@ -1,6 +1,6 @@
 # MERN-stack playground
 
-This is a fullstack playground app for testing all types of technologies
+This is a fullstack playground CRUD app for testing all types of technologies
 
 ## Server is using [this](https://github.com/alexander-rusiecki/dog-api) repository
 
@@ -9,6 +9,7 @@ This is a fullstack playground app for testing all types of technologies
 ### Stack includes:
 
 - React.js
+- React-query
 - Typescript
 - Node.js
 - Express
