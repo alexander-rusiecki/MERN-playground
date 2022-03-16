@@ -1,7 +1,7 @@
 import { useQuery } from 'react-query';
 import axios from 'axios';
-import { IDog } from '../models/DogInterface';
 import Dog from './Dog';
+import { IDog } from '../models/DogInterface';
 
 function DogList() {
   const { isLoading, data } = useQuery('dogs', () => {
