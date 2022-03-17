@@ -1,13 +1,13 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { QueryClientProvider, QueryClient } from 'react-query';
-import Navbar from './components/Navbar';
-import Home from './components/Home';
-import DogList from './components/DogList';
-import AddDog from './components/AddDog';
+import { Navbar } from 'components/Navbar';
+import { Home } from 'components/Home';
+import { DogList } from 'components/DogList';
+import { AddDog } from 'components/AddDog';
 
 const queryClient = new QueryClient();
 
-function App() {
+export const App = () => {
   return (
     <>
       <QueryClientProvider client={queryClient}>
@@ -22,6 +22,4 @@ function App() {
       </QueryClientProvider>
     </>
   );
-}
-
-export default App;
+};

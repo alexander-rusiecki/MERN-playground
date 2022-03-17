@@ -1,9 +1,9 @@
 import { useQuery } from 'react-query';
 import axios from 'axios';
-import Dog from './Dog';
-import { IDog } from '../models/DogInterface';
+import { Dog } from 'components/Dog';
+import { IDog } from 'models/DogInterface';
 
-function DogList() {
+export const DogList = () => {
   const { isLoading, data } = useQuery('dogs', () => {
     return axios.get<IDog[]>('http://localhost:4000/api/dogs/');
   });
@@ -18,6 +18,4 @@ function DogList() {
       ))}
     </>
   );
-}
-
-export default DogList;
+};

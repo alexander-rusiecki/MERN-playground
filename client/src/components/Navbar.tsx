@@ -10,7 +10,8 @@ import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 
 import { useState } from 'react';
-function Navbar() {
+import { Stack } from '@mui/material';
+export const Navbar = () => {
   const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElNav(event.currentTarget);
@@ -92,5 +93,4 @@ function Navbar() {
       </Container>
     </AppBar>
   );
-}
-export default Navbar;
+};

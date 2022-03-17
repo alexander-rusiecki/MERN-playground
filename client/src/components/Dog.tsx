@@ -1,10 +1,10 @@
-import { IDog } from '../models/DogInterface';
+import { IDog } from 'models/DogInterface';
 
 type DogProps = {
   dog: IDog;
 };
 
-function Dog({ dog }: DogProps) {
+export const Dog = ({ dog }: DogProps) => {
   return (
     <div key={dog._id} className="dog-card">
       <img src={dog.imageUrl} alt={dog.breed} />
@@ -12,6 +12,4 @@ function Dog({ dog }: DogProps) {
       <p>{dog.countryOfOrigin}</p>
     </div>
   );
-}
-
-export default Dog;
+};

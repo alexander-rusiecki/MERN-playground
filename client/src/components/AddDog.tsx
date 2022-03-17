@@ -1,7 +1,3 @@
-import React from 'react';
-
-function AddDog() {
+export const AddDog = () => {
   return <div>AddDog</div>;
-}
-
-export default AddDog;
+};
